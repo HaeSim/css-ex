@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-between;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        color: white;
+      }
+      /* .box:nth-child(3) {
+        background-color: red;
+      } */
+      /* .box:nth-child(n) {
+        background-color: red;
+      } */
+      .box:nth-child(2n-1) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">box1번</div>
+    <div class="box">box2번</div>
+    <div class="box">box3번</div>
+    <div class="box">box4번</div>
+    <div class="box">box5번</div>
+  </body>
+</html>
+
+<!-- 18. 의사클래스(가상클래스)
+  - 선택자에 추가하는 키워드로, 요소가 어떤 특정한 상태가 되었을 때 요소를 선택하겠다는 의미
+   → 선택자:의사클래스 { 속성명 : 속성값; }  // hover, active, focus, disabled, nth-child() 등
+   * https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes
+   ex) h1:hover{ color: red } -->
