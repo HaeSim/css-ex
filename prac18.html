@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+      div:nth-child(1) {
+        background-color: yellow;
+      }
+      div:nth-child(2) {
+        background-color: cyan;
+        bottom: 50px;
+      }
+      div:nth-child(3) {
+        background-color: palevioletred;
+        bottom: 100px;
+      }
+      div:nth-child(4) {
+        background-color: blue;
+        bottom: 150px;
+      }
+      .first {
+        /* 정수값만 된다. */
+        z-index: 4.1;
+      }
+      .second {
+        z-index: 3;
+      }
+      .third {
+        z-index: 1;
+      }
+      .fourth {
+        /* 같을 경우, 나중에 쌓인 것이 더 우선순위가 높다. */
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">1</div>
+    <div class="second">2</div>
+    <div class="third">3</div>
+    <div class="fourth">4</div>
+  </body>
+</html>
+<!-- 
+21. z-index
+  - 요소의 쌓임순서(stack order)를 정의할 수 있다. 정수 값을 지정하여 쌓임맥락(stacking context)에서의
+    레벨을 정의하는 방식으로 적용되며, 위치 지정 요소에 대해 적용할 수 있는 속성이다.
+	* 위치지정요소(positioned element) : position 속성이 정의되어 있는 요소
+  - 동일한 위치에 요소들이 배치되면, 요소들은 z축에서 쌓이게 된다. (기본적으로 나중에 생성된게 더 우선순위 가 높다) -->
